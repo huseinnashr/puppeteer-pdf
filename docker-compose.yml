@@ -3,6 +3,6 @@ services:
   puppeteer-pdf:
     image: huseinnashr/puppeteer-pdf
     ports: 
-      - "4000:4000"
+      - "4004:4000"
     volumes: 
       - .:/app
