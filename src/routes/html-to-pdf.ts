@@ -18,7 +18,9 @@ router.post("/single", async (req, res) => {
   await page.pdf({ path, format, printBackground: true });
   await browser.close();
 
-  await util.promisify(cp.exec)(`qpdf --encrypt userpasswd ${password} 256 -- ${path} --replace-input`)
+  if(password) {
+    await util.promisify(cp.exec)(`qpdf --encrypt userpasswd ${password} 256 -- ${path} --replace-input`)
+  }
 
   await util.promisify(res.download.bind(res))(path)
   await fs.promises.unlink(path);

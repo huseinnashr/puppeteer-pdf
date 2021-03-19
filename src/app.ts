@@ -7,7 +7,7 @@ import { htmlToPDFRouter } from './routes/html-to-pdf';
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({ limit: '1mb' }));
+app.use(bodyParser.json({ limit: '5mb' }));
 app.use(cors())
 
 app.use('/', indexRouter);
