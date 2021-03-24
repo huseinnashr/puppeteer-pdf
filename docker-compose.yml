@@ -1,8 +1,8 @@
 version: '3'
 services: 
   puppeteer-pdf:
-    image: huseinnashr/puppeteer-pdf
-    ports: 
-      - "4004:4000"
+    image: huseinnashr/puppeteer-pdf:0.0.3
     volumes: 
       - .:/app
+      - ./persistent/puppeteer-pdf:/app/persistent/puppeteer-pdf
+    network_mode: "host"
