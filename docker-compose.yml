@@ -1,7 +1,7 @@
 version: '3'
 services: 
   puppeteer-pdf:
-    image: huseinnashr/puppeteer-pdf:0.0.3
+    image: huseinnashr/puppeteer-pdf:0.0.4
     volumes: 
       - .:/app
       - ./persistent/puppeteer-pdf:/app/persistent/puppeteer-pdf
